@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/1a89fc54df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--------------------------------- Header section ---------------------------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logogp.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="headertext">
+                <p>Hi, i'm <span class="namecolor">Gnanaprakash</span>
+                 <br>from Vizag <br>I am a passionate</p>
+                 <!-- the reference tag for typed js.. like where typing effect should visible-->
+                <span id="element"></span>
+            </div>
+
+        </div>
+    </div>
+    <!-- typing effect  by using typed js-->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Frontend Developer', 'Video Editor','Logo Designer'],
+          typeSpeed: 50,
+        });
+      </script>
+
+    <!--------------------------------- About Section ----------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Aboutimage.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="about-title"><span class="namecolor">A</span>bout Me</h1>
+                    <hr color="grey" size="5px">
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sit ullam culpa nemo dolore perferendis inventore sapiente commodi voluptatem quos, laborum expedita vitae eos enim aliquam doloremque architecto quo fuga magnam quidem iusto. Minus autem fuga, reiciendis aut laborum dolor perspiciatis ullam magni cum delectus eum, quibusdam placeat incidunt molestiae.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('strengths')">Strengths</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python Programming</span><br>Good Knowledge in Python </li>
+                            <li><span>SQL </span><br>Good Knowledge in SQL</li>
+                            <li><span>Frontend Development</span><br>Gained basic Knowledge through several YOUTUBE channels</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Frontend Development</span><br>Designing small projects by using Frontend components</li>
+                            <li><span>Python</span><br>Completed Python Certification from SOLOLEARN</li>
+                            <li><span>SQL </span><br>Completed SQL Certification from SOLOLEARN</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="strengths">
+                        <ul>
+                            <li><span>Self-Learner</span></li>
+                            <li><span>Self-Motivated</span></li>
+                            <li><span>Adaptable person</span></li>
+                            <li><span>Zeal to learn New things</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- for diplaying content by clicking the tab-titles -->
+    <script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <!------------------------- Educational qualifications -------------------------------------->
+    <div class="education" id="education">
+        <p><span class="namecolor">M</span>y <span class="namecolor">E</span>ducation</p>
+        <div class="box">
+            <div class="vertical">
+                <div class="vertical-title">
+                    SSC (2017)
+                </div>
+                <div class="vertical-text">
+                    Done Schooling in Arunodaya high school and 
+                    achieved <span class="cgpa">8.8 </span>CGPA
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    Intermediate (2017-2019)
+                </div>
+                <div class="vertical-text">
+                    Completed Intermediate in AIIMS Jr college
+                    and achieved <span class="cgpa">9.67 </span>CGPA
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    BSc (2019-2022)
+                </div>
+                <div class="vertical-text">
+                    Completed BSc in the stream of Chemistry in 
+                    Maharajah's College and achieved <span class="cgpa">8.91 </span>CGPA
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    MCA (2022-2024)
+                </div>
+                <div class="vertical-text">
+                    Pursuing MCA in Madanapalle Institute of Technology and Science
+                    and achieved <span class="cgpa">8.3 </span>CGPA in 1st Semister
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------- myservices ---------------------------------------->
+    <div id="services">
+        <div class="container">
+            <p class="servicehead"><span class="namecolor">M</span>y <span class="namecolor">S</span>ervices</p>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto vel officia, odio dignissimos possimus perspiciatis architecto quas in quia est quo asperiores consequuntur nulla odit cumque nisi deserunt modi accusantium mollitia? Nulla molestiae eius quos dolore voluptatem labore laboriosam, enim repudiandae ducimus veniam vel debitis facere, omnis, repellendus ipsam nemo.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen-fancy"></i>
+                    <h2>LOGO Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto vel officia, odio dignissimos possimus perspiciatis architecto quas in quia est quo asperiores consequuntur nulla odit cumque nisi deserunt modi accusantium mollitia? Nulla molestiae eius quos dolore voluptatem labore laboriosam, enim repudiandae ducimus veniam vel debitis facere, omnis, repellendus ipsam nemo.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Video Editing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto vel officia, odio dignissimos possimus perspiciatis architecto quas in quia est quo asperiores consequuntur nulla odit cumque nisi deserunt modi accusantium mollitia? Nulla molestiae eius quos dolore voluptatem labore laboriosam, enim repudiandae ducimus veniam vel debitis facere, omnis, repellendus ipsam nemo.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <!---------------------------------------------------- contact ----------------------------------------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <p class="contact-title"><span class="namecolor">C</span>ontact <span class="namecolor">M</span>e</p>
+                    <p><i class="fa-solid fa-envelope"></i>prakashchalla007@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8179585575</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="" download class="btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Gnanaprakash made with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3PpHfgtoXJEnFMwawxQVI73xYs4S3HcKx4Jgz-9sa3qN0iIFsof7Z-iKpqAFfzS2I3w/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML="Submitted Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+
+</body>
+</html>
